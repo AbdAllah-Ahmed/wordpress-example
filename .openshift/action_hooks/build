@@ -2,7 +2,7 @@
 
 # To update the version shipped in this quickstart, bump this variable:
 #
-install_version="3.9.1"
+install_version="3.8.3"
 
 # Download and install Wordpress
 
@@ -20,12 +20,12 @@ current_version_dir=${OPENSHIFT_DATA_DIR}current
 mkdir -p $install_dir
 
 pushd ${install_dir} >/dev/null
-curl -s http://ar.wordpress.org/wordpress-3.9.1-ar.tar.gz > wordpress-3.9.1-ar.tar.gz
+curl -s http://ar.wordpress.org/wordpress-3.8.3-ar.tar.gz > wordpress-3.8.3-ar.tar.gz
 
 # Verify the sources
 #
-tarball_md5=$(md5sum wordpress-3.9.1-ar.tar.gz | cut -d ' ' -f 1)
-wordpress_md5=$(curl -s http://ar.wordpress.org/wordpress-3.9.1-ar.tar.gz.md5)
+tarball_md5=$(md5sum wordpress-3.8.3-ar.tar.gz | cut -d ' ' -f 1)
+wordpress_md5=$(curl -s http://ar.wordpress.org/wordpress-3.8.3-ar.tar.gz.md5)
 
 if [ "${tarball_md5}" != "${wordpress_md5}" ]; then
   echo "ERROR: Wordpress ${install_version} MD5 checksum mismatch."
@@ -34,8 +34,8 @@ fi
 
 # Install Wordpress
 #
-tar --strip-components=1 -xzf wordpress-3.9.1-ar.tar.gz
-rm -rf wordpress-3.9.1-ar.tar.gz
+tar --strip-components=1 -xzf wordpress-3.8.3-ar.tar.gz
+rm -rf wordpress-3.8.3-ar.tar.gz
 echo $install_version > ${OPENSHIFT_BUILD_DEPENDENCIES_DIR}.current_version
 
 popd >/dev/null

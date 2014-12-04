@@ -20,7 +20,7 @@ current_version_dir=${OPENSHIFT_DATA_DIR}current
 mkdir -p $install_dir
 
 pushd ${install_dir} >/dev/null
-curl -s http://ar.wordpress.org/wordpress-3.9.1.tar.gz > wordpress-3.9.1.tar.gz
+curl -s http://wordpress.org/wordpress-3.9.1.tar.gz > wordpress-3.9.1.tar.gz
 #curl -s http://ar.wordpress.org/wordpress-3.9.1-ar.tar.gz > wordpress-3.9.1-ar.tar.gz
 
 # Verify the sources
